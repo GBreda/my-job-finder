@@ -1,0 +1,36 @@
+{
+  "name": "radar-vagas",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server/index.ts",
+    "build": "vite build",
+    "start": "NODE_ENV=production tsx src/server/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test src/shared/match.test.ts src/shared/validation.test.ts src/server/store.test.ts src/server/mailer.test.ts src/server/api.test.ts"
+  },
+  "dependencies": {
+    "@mantine/core": "^9.8.0",
+    "@mantine/hooks": "^9.8.0",
+    "@mantine/notifications": "^9.8.0",
+    "express": "^4.22.3",
+    "nodemailer": "^10.5.0",
+    "tsx": "^4.23.15",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.6",
+    "@types/nodemailer": "^8.0.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  }
+}
